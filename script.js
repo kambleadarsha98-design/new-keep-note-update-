@@ -53,25 +53,35 @@ titleInput.addEventListener("input", function() {
     const noteCard = document.createElement("div");
     noteCard.classList.add("note-card");
 
-    // Create title for the note
+    // Create title heading
+    const titleH1 = document.createElement("h3");
+    titleH1.textContent = "Title:";
+
+    // Create title input (read-only)
     const newTitle = document.createElement("input");
     newTitle.type = "text";
-    newTitle.value = titleInput.value; // take modal input value
-    newTitle.readOnly = true;           // make it read-only
+    newTitle.value = titleInput.value;
+    newTitle.readOnly = true;
     newTitle.classList.add("note-title");
 
-    // Create content for the note
+    // Create content heading
+    const contentH1 = document.createElement("h3");
+    contentH1.textContent = "Content:";
+
+    // Create content textarea (read-only)
     const newContent = document.createElement("textarea");
-    newContent.value = textInput.value; // take modal input value
-    newContent.readOnly = true;          // make it read-only
+    newContent.value = textInput.value;
+    newContent.readOnly = true;
     newContent.classList.add("note-text");
 
-    // Append title and content to note card
+    // Append headings and inputs to note card
+    noteCard.appendChild(titleH1);
     noteCard.appendChild(newTitle);
+    noteCard.appendChild(contentH1);
     noteCard.appendChild(newContent);
 
-    // Append note card to #allNotes
-    document.getElementById("allNotes").appendChild(noteCard);
+    // Append note card to notes section
+    notesSection.appendChild(noteCard);
 
     // Hide modal and clear modal inputs
     container.style.visibility = 'hidden';
