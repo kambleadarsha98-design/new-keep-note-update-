@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keep note</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <div class="nav">
+        <h1>keep note</h1>
+          <div class="btn">
+        <button id="addBtn">Add Note</button>
+
+         <button   id="dark">🌙</button>
+        </div>
+
+
+    </div>
+     </header> 
+
+ <div class="modal-backdrop" id="noteModalBackdrop">
+    <div class="container" id="container">
+        <button class="close-button">×</button>
+        
+        <h2 id="titlehead">Add New Note</h2>
+        
+        <div class="form-group">
+            <label for="title">Title</label>
+            <div class="title">
+                <input type="text" id="title" placeholder="Enter note title..." required >
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="text">Content</label>
+            <div class="notes" id="notes">  
+                <textarea name="text" id="textcontent" placeholder="Write your note here..." required ></textarea>
+            </div>
+        </div>
+        
+        <div class="button-group">
+            <button class="action-button cancel-button" onclick="closeModal()">Cancel</button>
+            <button class="action-button save-button"  id="savebtn"  onclick="saveNote()">Save Note</button>
+        </div>
+    </div>
+</div>  
+
+
+   <div class="second">
+     
+    <div class="notes-section" id="notesSection">
+            <h1  id="titleh1">title:</h1>
+        <input type="text" id="titlenote" placeholder="Enter note title..." required > 
+        <h1  id="contenth1">content:</h1>
+        <textarea name="text" id="textdisplay" placeholder="Your content......"></textarea>
+        
+        <!-- Notes will be dynamically added here -->
+     </div> 
+
+    </div>
+
+  
+   <div class="div1">
+
+
+    
+   <div class="second">
+     
+    <div class="notes-section" id="notesSection">
+            <h1  id="titleh1">title:</h1>
+        <input type="text" id="titlenote" placeholder="Enter note title..." required > 
+        <h1  id="contenth1">content:</h1>
+        <textarea name="text" id="textdisplay" placeholder="Your content......"></textarea>
+        
+        <!-- Notes will be dynamically added here -->
+     </div> 
+
+    </div>
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
